@@ -1,0 +1,1 @@
+export const under = "body {display: flex;align-items: flex-start;place-content: center;overflow: hidden!important;}@media only screen and (max-width: 700px) {body {align-items: center;}.custom-button:after {content: none!important;} .custom-button:before {content: none!important;} .icon:after { content: none } "
