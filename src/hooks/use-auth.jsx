@@ -22,7 +22,7 @@ function useProvideAuth() {
       };
       option.body && (headers["Content-Type"] = "application/json");
       const rawResponse = await fetch(
-        `https://css-server.glitch.me${option.url}`,
+        `https://api.css.surf${option.url}`,
         {
           method: option.method ? option.method : "POST",
           credentials: "include",
