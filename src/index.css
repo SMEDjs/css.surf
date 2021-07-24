@@ -3,48 +3,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&family=Fredoka+One&display=swap');
 ::-webkit-scrollbar {
   width: 5px;
-  background: #151922;
+  background: transparent;
 }
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #4d5e81; 
+  background: #a4a4a41a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #42506e; 
+  background: #7070701a; 
 }
 .body {
-
-    display: flex;
+  display: flex;
   font-family: 'Barlow', sans-serif;
-      flex-flow: column;
+  flex-flow: column;
   height: 100vh;
 }
 .title {
-margin: 5px;
-    border: none;
-    outline: none;
-    padding: 10px 0;
+  margin: 5px;
+  border: none;
+  outline: none;
+  padding: 10px 0;
   transition: all 0.2s ease;
-      background: transparent;
+  background: transparent;
 }
-.soon {
-      color: #ff0000b0!important;
-    font-weight: 600;
-    letter-spacing: 1px;
+.soon, .error {
+  color: #ff0000b0!important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.pencil {
+  background-image: linear-gradient(228deg, #0084ff, #00a8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 15px;
+}
+.palette {
+  background-image: linear-gradient(60deg, #ffbb00, #efd500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 15px;
+}
+.icons {
+  background-image: linear-gradient( 228deg, #00ff4c, #00da2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 15px;
+}
+.heart {
+  background-image: linear-gradient(267deg, #ff3232, #ff774d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 15px;
+}
+.bigText {
+  font-size: 50px;
+  padding: 30px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  text-align: center;
+}
+.subscription {
+  margin: 20px;
+  width: fit-content;
+  background-image: linear-gradient( 
+129deg
+, #007CF0, #00b4ff);
+  color: white;
+  padding: 10px 50px;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.chakra-ui-dark {
+  background: #181e2a!important
+}
+.email {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.email::placeholder {
+  color: #bac1ca!important;
 }
 .emojis {
-      bottom: 0;
-    left: 100%;
-    margin-bottom: 175px;
-    margin-left: -22px;
-    position: absolute;
-    background: #f7f7f7;
-    padding: 3px 5px;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-    border-radius: 10px;
+  bottom: 0;
+  left: 100%;
+  margin-bottom: 175px;
+  margin-left: -22px;
+  position: absolute;
+  background: #f7f7f7;
+  padding: 3px 5px;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 .like {
   cursor: pointer;
@@ -62,27 +119,27 @@ margin: 5px;
   background: #a4a4a41a;
 }
 .pay {
-      width: 100%;
-    background: #00b6e9;
-    border-radius: 6px;
-    height: 40px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    margin: 10px 0 2px 0;
+  width: 100%;
+  background: #00b6e9;
+  border-radius: 6px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin: 10px 0 2px 0;
 }
 .premium {
-    font-size: 22px;
-    font-weight: 700;
-    background-image: linear-gradient(129deg, #007CF0, #00ffe0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  font-weight: 700;
+  background-image: linear-gradient(129deg, #007CF0, #00ffe0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .stripe {
   font-size: 12px;
-    letter-spacing: 0.4px;
-    color: #ffffff47;
-      display: flex;
+  letter-spacing: 0.4px;
+  color: #ffffff47;
+  display: flex;
 }
 .stripeIcon {
   font-size: 22px;

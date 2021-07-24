@@ -1,10 +1,12 @@
-
 import React, { useState } from 'react'
+import { css } from "@emotion/css"
 import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
 import { useAuth } from "../hooks/use-auth.jsx";
 import CardInput from './card.jsx';
-import { Input, useToast,  Modal, ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalCloseButton, useDisclosure} from "@chakra-ui/react";
+import { Div, CardPremium } from "../styles/styled";
+import { useToast,  Modal, ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalCloseButton, useDisclosure, useColorModeValue} from "@chakra-ui/react";
 export const Payment = ((props) => {
+  const colorText = useColorModeValue("#374157c7", "#bfbfbfc7")
   const { subscription } = useAuth();
   const [email, setEmail] = useState('');
   const toast = useToast()
@@ -55,6 +57,8 @@ const { isOpen, onOpen, onClose } = useDisclosure()
           <ModalCloseButton />
           <ModalBody>
           <div>
+            <div className="error">payment are not implemented for now ...</div>
+            <input className={`email`} placeholder="email"></input>
             <CardInput />
           </div>
           </ModalBody>
@@ -71,8 +75,70 @@ const { isOpen, onOpen, onClose } = useDisclosure()
         </ModalContent>
       </Modal>
       <div>
-        
-        <button onClick={onOpen}>Subscription</button>
+        <Div d="flex" jc="center" ai="center" ff="column">
+          <div className='bigText'>
+            unlock <span className={`premium ${css`font-size: inherit;`}`}>premium</span> subscription
+          </div>
+          <Div d="flex" w="100%" jc="center" className={css`@media (max-width: 800px) {flex-flow: column;align-items: center;}`}>
+            <div className={css`@media (max-width: 800px) {width: 60vw;}`}>
+              <CardPremium d="flex">
+                 <Div ps="center" fs="23px">
+                    <i class="fas fa-pencil-alt pencil"></i>
+                  </Div>
+                <Div>
+                <Div fw="500">
+                    custom text
+                </Div>
+                <Div c={colorText} fs="16px">
+                  use any text on your element
+                </Div>
+                </Div>
+              </CardPremium>
+              <CardPremium d="flex">
+                <Div ps="center" fs="23px">
+                  <i class="fas fa-palette palette"></i>
+                </Div>
+                <Div>
+                <Div fw="500">
+                    custom emojis
+                </Div>
+                <Div c={colorText} fs="16px">
+                  unlock more emojis
+                </Div>
+                </Div>
+              </CardPremium>
+            </div>
+            <div className={css`@media (max-width: 800px) {width: 60vw;}`}>
+              <CardPremium d="flex">
+                <Div ps="center" fs="23px">
+                  <i class="fas fa-icons icons"></i>
+                </Div>
+                <Div>
+                  <Div fw="500">
+                      custom icons
+                  </Div>
+                  <Div c={colorText} fs="16px">
+                    unlock more icons
+                  </Div>
+                </Div>
+              </CardPremium>
+              <CardPremium d="flex">
+                <Div ps="center" fs="23px">
+                  <i class="fas fa-heart heart"></i>
+                </Div>
+                <Div>
+                <Div fw="500">
+                    support
+                </Div>
+                <Div c={colorText} fs="16px">
+                  support the website
+                </Div>
+                </Div>
+              </CardPremium>
+            </div>
+          </Div>
+          <button onClick={onOpen} className={`subscription`}>Subscription</button>
+        </Div>
       </div>
     </div>
   );

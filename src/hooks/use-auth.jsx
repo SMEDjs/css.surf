@@ -25,7 +25,7 @@ function useProvideAuth() {
         `https://css-server.glitch.me${option.url}`,
         {
           method: option.method ? option.method : "POST",
-          credentials: "include",
+          //credentials: "include",
           headers,
           body: JSON.stringify(option.body ? option.body : undefined)
         }

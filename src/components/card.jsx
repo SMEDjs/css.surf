@@ -6,7 +6,6 @@ const CARD_ELEMENT_OPTIONS = {
  base: {
       color: '#fff',
       fontWeight: 500,
-      fontFamily: 'Source Code Pro, Consolas, Menlo, monospace',
       fontSize: '18px',
       fontSmoothing: 'antialiased',
       background: 'transparent',

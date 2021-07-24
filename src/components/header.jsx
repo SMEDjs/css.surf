@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { css } from "@emotion/css"
-import { useToast,useDisclosure,Button,Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalCloseButton,Tabs,TabList,TabPanels,Tab,TabPanel, useColorMode, useColorModeValue} from "@chakra-ui/react";
+import { useToast,useDisclosure,Modal,ModalOverlay,ModalContent,ModalHeader,ModalBody,ModalCloseButton,Tabs,TabList,TabPanels,Tab,TabPanel, useColorMode, useColorModeValue} from "@chakra-ui/react";
 import { PrimaryButton, PrimaryForm, Div } from "../styles/styled";
 import { useAuth } from "../hooks/use-auth.jsx";
 
@@ -87,10 +87,11 @@ export default ({ children }) => {
             </div>
           </div>
           <div className={css`display: flex;`}>
-
+            {/* useless for the moment
             <Link to="/premium" className="premiumButton">
               <span className="premium">premium</span>
             </Link>
+            */}
             <div onClick={toggleColorMode} className={css`display: flex;align-items: center;`}>
               <span className="material-icons iconSwitch">{colorMode === "light" ? "brightness_3" : "light_mode" }</span>
             </div>
